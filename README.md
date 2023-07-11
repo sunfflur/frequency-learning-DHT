@@ -21,5 +21,6 @@ In each folder, you'll find individual Python notebooks that can be executed ind
 | Exp_KTD_a_DHT.pynb   | This notebook contains the implementation of the DHT frequency-based model on Kylberg dataset. It considers the best scenarios of the previous notebook: number of splitting levels = 3 and width = 1.|
 | Exp_KTD_EfficientNetV2S.pynb    | This notebook contains the implementation of EfficientNetV2S to classify the KTD images. Here we explore two versions of the same model: Using transfer learning - Pre-trained model; Without transfer learning - Random initialization. |
 | Exp_KTD_DenseNet169.pynb    | This notebook contains the implementation of DenseNet169 to classify the KTD images. Here we explore two versions of the same model: Using transfer learning - Pre-trained model; Without transfer learning - Random initialization. |
+| processed.md   | This file contains the drive links for each of the data used on the notebooks, from image data to coefficients data on both domains, Fourier and Hartley.|
 
 
