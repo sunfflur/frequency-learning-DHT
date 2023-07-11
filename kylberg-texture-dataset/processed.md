@@ -1,9 +1,17 @@
-# Coefficients for the frequency layer
+# DFT Coefficients for the frequency layer
 
 Files .npy | Description |
 |-------------|-------------|
 [KTD Train input](https://drive.google.com/file/d/1Cq7xjywN2B8RE1uLLJIkUGoX9tgM3oSv/view?usp=sharing) | w=1; levels=3 |
 [KTD Test input](https://drive.google.com/file/d/1CnMN9O9l6WIurKJYh1e3ZUjPIBw5UtUq/view?usp=sharing) | w=1; levels=3 |
+
+
+# DHT Coefficients for the frequency layer
+
+Files .npy | Description |
+|-------------|-------------|
+[KTD Train input](https://drive.google.com/file/d/1pp8aIWmUr1NPTE1ed8XZFQrpl0uYWKO0/view?usp=sharing) | w=1; levels=3 |
+[KTD Test input](https://drive.google.com/file/d/1q-OyVgbF8KEDlaxsVZaZq8i3L4yIHMcN/view?usp=sharing) | w=1; levels=3 |
 
 
 # Original images splitted into train and test sets
