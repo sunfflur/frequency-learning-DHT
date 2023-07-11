@@ -1,1 +1,39 @@
-# frequency-learning-DHT
+# Frequency learning based on the Hartley transform applied to texture classification
+
+## Abstract
+#### Artificial intelligence tools are becoming increasingly popular in current technologies, especially convolutional neural networks, which have shown surprising results in computer vision tasks. However, in some scenarios, it may be more intelligible to represent and analyze data in a transformed domain (e.g., frequency domain), which raises the idea of having a model whose learning and operations occur in this new domain. Therefore, this work aims to develop and analyze a frequency learning model based on the Hartley transform, given the real characteristic of the spectrum produced, exploring its convolution property in creating a processing layer that emerges as a potential alternative to convolutional layers. The proposed model is characterized by the following steps: (i) division into blocks, (ii) transformation to the frequency domain via Hartley transform, (iii) filtering and frequency grouping, and (iv) propagation of spectral attributes through dense layers until generating the output. This model was analyzed in the context of the texture classification problem, given its natural appeal to the frequency domain, using three datasets: Kylberg Texture Dataset (KTD), a database containing monochromatic images divided into 28 classes; KTH-TIPS2-b, a database divided into 11 classes and composed of RGB images that have variations in scale, position, and lighting; and ALOT, a database with 250 classes that adds variations in lighting, angles, and focus direction in RGB images. The results show that the frequency-based Hartley transform model is competitive compared to some well-established CNNs in the literature and presents a significant reduction in the number of adjustable parameters and training time, constituting a promising and relatively lightweight alternative.
+
+## Experiments
+#### Repository composed by the algorithms used to compare the frequency-domain approach and some ConvNets on 4 datasets:
+  - Kylberg Texture Dataset;
+  - KTH-TIPS2-b;
+  - ALOT.
+
+## Usage
+
+In each folder, you'll find individual Python notebooks that can be executed independently. The notebooks cover various aspects of the project and can be used for different purposes. Follow the content description within each notebook to understand and utilize the code effectively. It's important to mention the following notebooks refers to the implementation of the frequency-based model on the Hartley domain.
+
+## Content description
+
+| [Kylberg Texture Dataset](https://kylberg.org/kylberg-texture-dataset-v-1-0/) | Description |
+|-------------|-------------|
+| Exp_02_ViTb6_32.pynb    | This notebook contains the implementation of ViT-b/16 and ViT-b/32 to classify the 28 classes from Kylberg Texture Dataset. There are two variations of ViT-b/16: using image size 224x224 and 384x384 pixels. |
+| Exp_02_a_**ConvNet**.pynb    | These types of notebooks presents the implementation of the **ConvNet** on Kylberg dataset considering the use of transfer learning -- training only the output layer -- and random initialization -- training all the network from scratch --. |
+| Exp_02_a_**ConvNet**\_varyingdatasize.pynb    | These types of notebooks presents the implementation of the **ConvNet** on Kylberg dataset similarly to the files above, however, in the _Random Initialization_ section, it also computes the test accuracy when the network is dealing with different sizes of training data -- from 100% to 10% of all the training set. |
+| Exp_02_a.pynb   | This notebook contains the implementation of the frequency-based model on Kylberg dataset. It considers only 3 levels of blocks division and width = 1. |
+| Exp_02_a_v2.pynb   | This notebook is an updated version of the above. It contains ablation studies in some components of the proposed approach: the number of splitting levels vary from 3 to 1 and the width vary from 1 to 4. |
+
+| [EyeQ Dataset](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data) | Description |
+|-------------|-------------|
+| Exp_EyeQ.pynb   | This notebook contains the implementation of the frequency-based model on both classes of EyeQ dataset: _good_ and _reject_. It considers 3 levels of blocks division and width = 1. |
+| Exp_EyeQ_**ConvNet**.pynb    | These types of notebooks presents the implementation of the **ConvNet** on EyeQ dataset considering the use of transfer learning -- training only the output layer -- and random initialization -- training all the network from scratch --. |
+
+| [ODIR Dataset](https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k) | Description |
+|-------------|-------------|
+| Exp_ODR2_a.pynb   | This notebook contains the implementation of the frequency-based model on the classes _cataract_ and _normal_ from the Ocular Disease Intelligent Recognition (ODIR) dataset. It considers 3 levels of blocks division and width = 1. To avoid possible bias, we also take care of keeping data from the same patient in the same set, since some of the patients have the disease on both eyes. |
+| Exp_ODR2_**ConvNet**.pynb    | These types of notebooks presents the implementation of the **ConvNets** on ODIR dataset considering the use of transfer learning -- training only the output layer -- and random initialization -- training all the network from scratch --. |
+
+| [Cataract Dataset](https://www.kaggle.com/datasets/jr2ngb/cataractdataset) | Description |
+|-------------|-------------|
+| Exp_Retina.pynb   | This notebook contains the implementation of the frequency-based model on the classes _cataract_ and _normal_ from the Kaggle Cataract dataset. It considers 3 levels of blocks division and width = 1. This experiment is similar to the ODIR related experiment, however, here we do not consider the fundus images of the same patients in the same set. |
+| Exp_Retina_**ConvNet**.pynb    | These types of notebooks presents the implementation of the **ConvNets** on Kaggle Cataract dataset considering the use of transfer learning -- training only the output layer -- and random initialization -- training all the network from scratch --. |
